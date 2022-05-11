@@ -1,3 +1,6 @@
+import Card from '../card/card.component';
+import MealItem from '../meals/meal-item/meal-item.component';
+
 import { StyledDiv } from './meals-available.styles';
 
 const DUMMY_MEALS = [
@@ -28,11 +31,20 @@ const DUMMY_MEALS = [
 ];
 
 const MealsAvailable = () => {
-  const mealsList = DUMMY_MEALS.map(meal => <li>{meal.name}</li>);
+  const mealsList = DUMMY_MEALS.map(meal => ( 
+    <MealItem 
+      key={meal.id} 
+      name={meal.name} 
+      description={meal.description} 
+      price={meal.price} 
+   />
+  ));
 
   return (
     <StyledDiv>
-      <ul>{mealsList}</ul>
+      <Card>
+        <ul>{mealsList}</ul>
+      </Card>
     </StyledDiv>
   );
 };
