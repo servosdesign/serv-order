@@ -1,1 +1,1 @@
-#### Food ordering app to add, remove, and checkout orders built using Context API, Hooks, and Styled Components
+#### Food ordering app, powered by Context API, Hooks, and Styled Components, which allows the user to add, remove, and checkout food orders
