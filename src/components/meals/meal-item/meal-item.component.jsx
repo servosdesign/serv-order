@@ -1,3 +1,5 @@
+import MealItemForm from './meal-item-form.component';
+
 import { StyledLi, StyledDescription, StyledPrice } from './meal-item.styles';
 
 const MealItem = props => {
@@ -11,7 +13,7 @@ const MealItem = props => {
         <StyledPrice>{price}</StyledPrice>
       </div>
       <div>
-
+        <MealItemForm id={props.id} />
       </div>
     </StyledLi>
   );
