@@ -19,33 +19,30 @@ export const StyledTotal = styled.div`
 
 export const StyledActions = styled.div`
   
-  &. actions {
   text-align: right;
-  }
 
-  & .actions button {
+  & button {
     font: inherit;
     cursor: pointer;
     background-color: transparent;
-    border: 1px solid #8a2b06;
+    border: 1px solid #800020;
     padding: 0.5rem 2rem;
     border-radius: 25px;
     margin-left: 1rem;
   }
 
-  & .actions button:hover, 
-    .actions button:active {
-    background-color: #5a1a01;
-    border-color: #5a1a01;
+  & button:hover, button:active {
+    background-color: #2c0d00;
+    border-color: #2c0d00;
     color: white;
   }
 
   & .button--alt{
-    color: #8a2b06;
+    color: #800020;
   }
 
-  & .actions .button {
-    background-color: #8a2b06;
+  & .button {
+    background-color: #800020;
     color: white;
   }
 `;
