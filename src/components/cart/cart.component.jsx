@@ -11,14 +11,14 @@ const Cart = props => {
   }].map((item) => <li>{item.name}</li>)}</StyledCartItems>;
 
   return (
-    <Modal>
+    <Modal onClose={props.onClose}>
       {cartItems}
       <StyledTotal>
         <span>Total Amount</span>
         <span>35.62</span>
       </StyledTotal>
       <StyledActions className='actions'>
-        <button className='button--alt'>Close</button>
+        <button onClick={props.onClose} className='button--alt'>Close</button>
         <button className='button'>Order</button>
       </StyledActions>
     </Modal>

@@ -9,7 +9,7 @@ const Header = props => {
     <>
       <StyledHeader>
         <h1>ServOrder</h1>
-        <HeaderCartButton />
+        <HeaderCartButton onClick={props.onShowCart} />
       </StyledHeader>
       <StyledDiv>
         <img src={mealsImg} alt='A table full of delicious food!' />
