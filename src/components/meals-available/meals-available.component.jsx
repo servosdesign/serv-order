@@ -3,13 +3,15 @@ import { useEffect, useState } from 'react';
 import Card from '../card/card.component';
 import MealItem from '../meals/meal-item/meal-item.component';
 
-import { StyledDiv } from './meals-available.styles';
+import { StyledDiv, StyledLoading } from './meals-available.styles';
 
 const MealsAvailable = () => {
   const [meals, setMeals] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchMeals = async () => {
+      setIsLoading(true);
       const response = await fetch('https://servor-default-rtdb.firebaseio.com/meals.json');
       const responseData = await response.json();
 
@@ -23,10 +25,19 @@ const MealsAvailable = () => {
         });
       }
       setMeals(loadedMeals);
+      setIsLoading(false);
     };
 
     fetchMeals();
   }, []);
+
+  if (isLoading) {
+    return (
+    <StyledLoading>
+      <p>Loading...</p>
+    </StyledLoading>
+    );
+  };
 
   const mealsList = meals.map(meal => (
     <MealItem

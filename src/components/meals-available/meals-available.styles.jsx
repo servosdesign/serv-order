@@ -25,3 +25,8 @@ export const StyledDiv = styled.div`
   }
 `;
 
+export const StyledLoading = styled.div`
+  text-align: center;
+  color: white;
+`;
+
