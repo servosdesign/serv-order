@@ -30,3 +30,8 @@ export const StyledLoading = styled.div`
   color: white;
 `;
 
+export const StyledError = styled.div`
+  text-align: center;
+  color: red;
+`;
+
