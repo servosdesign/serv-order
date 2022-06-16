@@ -34,7 +34,8 @@ export const StyledCartItem = styled.li`
   }
 
   & button:hover, button:active {
-    background-color: #8a2b06;
+    background-color: #2c0d00;
+    border-color: #2c0d00;
     color: white;
   }
 `;

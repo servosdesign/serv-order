@@ -9,7 +9,7 @@ export const bump = keyframes`
   `;
 
 export const StyledButton = styled.button`
-cursor: pointer;
+  cursor: pointer;
   font: inherit;
   border: none;
   background-color: #800020;
