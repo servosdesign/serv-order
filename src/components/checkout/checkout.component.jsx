@@ -29,7 +29,7 @@ const Checkout = props => {
     const enteredNameIsValid = !isEmpty(enteredName);
     const enteredStreetIsValid = !isEmpty(enteredStreet);
     const enteredCityIsValid = !isEmpty(enteredCity);
-    const enteredPostIsValid = !isFiveChars(enteredPostal);
+    const enteredPostIsValid = !isFiveChars(enteredPostal) || !isEmpty(enteredPostal);
 
     setFormInputsValidity({
       name: enteredNameIsValid,
@@ -51,22 +51,22 @@ const Checkout = props => {
 
   return (
     <StyledForm onSubmit={confirmHandler}>
-      <StyledDiv >
+      <StyledDiv className={!formInputsValidity.name && 'invalid'}>
         <label htmlFor='name'>Your Name</label>
         <input type='text' id='name' ref={nameInputRef} />
         {!formInputsValidity.name && <p>Please enter a valid name!</p>}
       </StyledDiv>
-      <StyledDiv >
+      <StyledDiv className={!formInputsValidity.street && 'invalid'}>
         <label htmlFor='street'>Street</label>
         <input type='text' id='street' ref={streetInputRef} />
         {!formInputsValidity.street && <p>Please enter a valid street!</p>}
       </StyledDiv>
-      <StyledDiv >
+      <StyledDiv className={!formInputsValidity.postalCode && 'invalid'}>
         <label htmlFor='postal'>Postal Code</label>
         <input type='text' id='postal' ref={postalInputRef} />
         {!formInputsValidity.postalCode && <p>Please enter a valid postal code (5 characters long)!</p>}
-      </StyledDiv>
-      <StyledDiv >
+      </StyledDiv >
+      <StyledDiv className={!formInputsValidity.city && 'invalid'}>
         <label htmlFor='city'>City</label>
         <input type='text' id='city' ref={cityInputRef} />
         {!formInputsValidity.city && <p>Please enter a valid city!</p>}

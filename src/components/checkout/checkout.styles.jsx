@@ -18,15 +18,13 @@ export const StyledDiv = styled.div`
     max-width: 100%;
     }
 
-    ${props => props.validationFailed} {
-      & label {
-        color: #ca3e51;
-      }
-
-      & input {
-        border-color: #aa0b20;
-        background-color: #ffeff1;
-      }
+    &.invalid label {
+      color: red;
+    }
+    
+    &.invalid input {
+      border-color: red;
+      background-color: #ffd7d7;
     }
 `;
 
