@@ -1,30 +1,33 @@
 import styled from 'styled-components';
 
 export const StyledDiv = styled.div`
-  margin-bottom: 0.5rem;
+  
+    margin-bottom: 0.5rem;
 
-   & label {
+    & label {
     font-weight: bold;
     margin-bottom: 0.25rem;
     display: block;
-   }
+    }
 
-   & input {
+    & input {
     font: inherit;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 20rem;
     max-width: 100%;
-   }
+    }
 
-   & .invalid label {
-    color: #ca3e51;
-  }
-  
-  & .invalid input {
-    border-color: #aa0b20;
-    background-color: #ffeff1;
-  }
+    ${props => props.validationFailed} {
+      & label {
+        color: #ca3e51;
+      }
+
+      & input {
+        border-color: #aa0b20;
+        background-color: #ffeff1;
+      }
+    }
 `;
 
 export const StyledActions = styled.div`
@@ -34,7 +37,7 @@ export const StyledActions = styled.div`
 
   & button {
     font: inherit;
-    color: #800020;
+    color: #5a1a01;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -43,20 +46,9 @@ export const StyledActions = styled.div`
   }
   
   & button:hover, button:active {
-    background-color: #2c0d00;
-    border-color: #2c0d00;
-    color: white;
+    background-color: #ffe6dc;
   }
 
-  & submit {
-    border: 1px solid #5a1a01;
-    background-color: #5a1a01;
-    color: white;
-  }
-  
-  & submit:hover, & submit: active {
-    background-color: #7a2706;
-  }
 `;
 
 export const StyledForm = styled.form`
