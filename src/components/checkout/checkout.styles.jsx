@@ -35,7 +35,7 @@ export const StyledActions = styled.div`
 
   & button {
     font: inherit;
-    color: #5a1a01;
+    color: #800020;
     cursor: pointer;
     background-color: transparent;
     border: none;
@@ -44,7 +44,9 @@ export const StyledActions = styled.div`
   }
   
   & button:hover, button:active {
-    background-color: #ffe6dc;
+    background-color: #2c0d00;
+    border-color: #2c0d00;
+    color: white;
   }
 
 `;
